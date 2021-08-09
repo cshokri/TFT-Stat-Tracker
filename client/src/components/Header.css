@@ -1,0 +1,152 @@
+:root {
+  --top: 20px;
+  --first-place: rgb(212, 201, 96);
+  --second-place: rgb(146, 146, 146);
+  --third-place: rgb(179, 100, 47);
+  --fourth-place: rgb(200, 90, 90);
+  --shadow-color: rgba(0, 0, 0, 0.16);
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  outline: #9a9a9a solid 2px;
+  box-shadow: 0px 3px 6px var(--shadow-color);
+  height: 390px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #414141;
+}
+
+.container > div:nth-child(-n + 3) {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.player-rank {
+  margin-top: var(--top);
+}
+
+.player-rank__icon {
+  -webkit-filter: drop-shadow(0px 3px 6px var(--shadow-color));
+  filter: drop-shadow(0px 3px 6px var(--shadow-color));
+}
+
+.player-rank__rank {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.player-rank__rank:first-letter {
+  text-transform: uppercase;
+}
+
+.player-rank__lp {
+  font-size: 24px;
+}
+
+.player-info {
+  justify-content: center;
+  margin: 0px;
+}
+
+.player-info__name {
+  margin-top: 10px;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.player-info__icon {
+  border-radius: 10px;
+  border: #393838 solid 10px;
+  box-shadow: 0px 3px 6px var(--shadow-color);
+}
+
+.player-winrate {
+  margin-top: var(--top);
+}
+/*
+.player-winrate__circle-percent {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 195px;
+  height: 195px;
+  z-index: 10;
+}
+
+svg circle {
+  width: 100%;
+  fill: none;
+  stroke: #ff7771;
+  stroke-width: 15;
+  stroke-linecap: round;
+  transform: translate(7.5px, 7.5px);
+}
+
+svg circle:nth-child(2) {
+  stroke-dasharray: 565;
+  stroke-dashoffset: calc(565 - (565 * 0) / 100);
+  stroke: #6bb9ff;
+  transition: ease 1.5s;
+}
+
+.player_winrate__percent {
+  position: absolute;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #393838;
+}
+
+.wins-losses {
+  margin-top: 5px;
+}
+
+.wins-losses * {
+  display: flex;
+  font-size: 16px;
+  font-weight: normal;
+  justify-content: center;
+}
+*/
+.player_winrate__top-placings > div * {
+  display: inline;
+  margin: 0px 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.player_winrate__top-placings > div {
+  margin-top: 15px;
+}
+
+.player_winrate__first-second div:nth-child(1) {
+  color: var(--first-place);
+}
+
+.player_winrate__first-second div:nth-child(2) {
+  color: var(--second-place);
+}
+
+.player_winrate__third-fourth div:nth-child(1) {
+  color: var(--third-place);
+}
+
+.player_winrate__third-fourth div:nth-child(2) {
+  color: var(--fourth-place);
+}

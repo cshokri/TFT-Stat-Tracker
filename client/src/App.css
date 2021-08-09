@@ -1,0 +1,47 @@
+.App {
+  margin: 35px 80px 0px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  min-height: 530px;
+  margin-top: 30px;
+}
+
+.info-container > div {
+  background-color: #f9f9f9;
+  box-shadow: 0px 3px 6px var(--shadow-color);
+  height: auto;
+}
+
+h1 {
+  width: fit-content;
+  margin: 5px auto;
+  margin-top: 10px;
+}
+
+.player__stats {
+  display: flex;
+  flex-direction: column;
+  width: 620px;
+  margin-right: auto;
+}
+
+.player-stats__most-played {
+  display: flex;
+  background-color: #ffffff;
+  outline: #707070 solid 1px;
+  margin: 0px 30px;
+  height: auto;
+  min-height: 400px;
+}
+
+h2 {
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.player__match-history {
+  width: 1100px;
+}

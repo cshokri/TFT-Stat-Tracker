@@ -1,0 +1,4 @@
+.env
+node_modules/
+dragontail-11.8.1.tgz
+server/data-dragon/
