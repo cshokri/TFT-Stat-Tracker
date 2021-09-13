@@ -9,7 +9,7 @@ export default function Header(props) {
         <div className="header__title">Current Rank</div>
         <img
           className="player-rank__icon"
-          src={props.rankEmblem}
+          src={"/profileImages/ranks/Emblem_" + props.tier + ".png"}
           alt="N/A"
           width="176"
           height="201"
@@ -22,7 +22,7 @@ export default function Header(props) {
       <div className="player-info">
         <img
           className="player-info__icon"
-          src={props.icon}
+          src={"/profileImages/profileicon/" + props.icon + ".png"}
           alt="N/A"
           width="200"
           height="200"

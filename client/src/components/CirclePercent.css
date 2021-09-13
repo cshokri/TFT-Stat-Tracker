@@ -1,5 +1,4 @@
 .circle-percent {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,14 +11,14 @@ svg {
 svg circle {
   width: 100%;
   fill: none;
-  stroke: #ff7771;
+  stroke: var(--loss-color);
   stroke-width: 15;
   stroke-linecap: round;
   transform: translate(7.5px, 7.5px);
 }
 
 svg circle:nth-child(2) {
-  stroke: #6bb9ff;
+  stroke: var(--won-color);
   transition: ease 1.5s;
 }
 
@@ -40,4 +39,5 @@ svg circle:nth-child(2) {
   margin: auto;
   font-weight: normal;
   margin-top: 5px;
+  width: fit-content;
 }

@@ -13,7 +13,6 @@ const API_KEY = process.env.API_KEY;
 let api = new riotAPI(API_KEY, user, tag);
 
 let icon;
-let rankedEmblem;
 let wins;
 let losses;
 let matches;
@@ -23,11 +22,10 @@ let lp;
 
 api
   .init(async function () {
-    matches = await api.getPastMatches();
+    matches = await api.getPastMatches(12);
   })
   .then(() => {
     icon = api.getUserIcon();
-    rankedEmblem = api.getRankedEmblem();
     wins = api.getWins();
     losses = api.getLosses();
     tier = api.getTier();
@@ -38,7 +36,7 @@ api
 //app.use(express.static(path.resolve(__dirname, "../client/build")));
 
 app.get("/MatchHistory", (req, res) => {
-  res.json({ matchHistory: matches });
+  res.json({ matches });
 });
 
 app.get("/PlayerData", (req, res) => {
@@ -50,16 +48,17 @@ app.get("/PlayerData", (req, res) => {
     lp: lp,
     wins: wins,
     losses: losses,
+    icon: icon,
   });
 });
 
-app.get("/PlayerIcon", (req, res) => {
-  res.sendFile(icon, { root: "./server" });
+let maxComps = 3;
+app.get("/MostPlayed", (req, res) => {
+  res.json(api.getMostPlayed(maxComps));
 });
 
-app.get("/RankEmblem", (req, res) => {
-  res.sendFile(rankedEmblem, { root: "./server" });
-});
+app.use("/profileImages", express.static(path.join(__dirname, "data-dragon")));
+app.use("/image", express.static(path.join(__dirname, "tft-set-5")));
 /*
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));

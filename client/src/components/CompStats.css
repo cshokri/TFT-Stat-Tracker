@@ -1,4 +1,43 @@
-.match {
-  width: fit-content;
-  height: fit-content;
+.most-played-comp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: var(--background-emphasized);
+}
+
+.comp-info {
+  margin-right: 20px;
+}
+
+.comp-info__name {
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+.comp-info__core {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.comp-info__carry {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.comp-info__items {
+  display: flex;
+  flex-direction: row;
+}
+
+.comp-info__items img {
+  margin-right: 8px;
+  border-radius: 8px;
+  border: var(--item-border) solid 3px;
+  width: 40px;
+  height: 40px;
 }

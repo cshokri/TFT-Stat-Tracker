@@ -1,0 +1,134 @@
+.match {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+    background-color: white;
+    height: 175px;
+    border: var(--info-border) solid 1px;
+    margin-bottom: 10px;
+}
+
+.match_general-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.match__placings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    padding: 0px 20px;
+    width: fit-content;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.match__specific-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: var(--background-emphasized);
+    color: var(--text-emphasized);
+    padding: 12px;
+    padding-top: 8px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.match__type {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.match__date {
+    font-size: 14px;
+}
+/* TODO:
+- possible add date and whether its ranked/normals
+- possibly add the comp traits */
+.match__stats {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.match__stats > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    box-shadow: 0px 3px 6px var(--shadow-color);
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.match__stats > div:first-of-type {
+    margin-top: 0px;
+}
+
+.match__stats .value {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* All units container */
+.units {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    box-shadow: 0px 3px 6px var(--shadow-color);
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--background-color);
+}
+
+/* Each units container */
+.unit-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.unit-container:last-of-type {
+    margin-right: 0px;
+}
+
+.unit-tier {
+    width: 60px;
+    height: 20px;
+}
+
+.tier-padding {
+    margin-top: 20px;
+}
+
+.unit-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.items {
+    height: 20px;
+    width: fit-content;
+}
+
+.items > img {
+    width: 20px;
+    height: 20px;
+}

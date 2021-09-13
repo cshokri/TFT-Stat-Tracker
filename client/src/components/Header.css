@@ -1,12 +1,3 @@
-:root {
-  --top: 20px;
-  --first-place: rgb(212, 201, 96);
-  --second-place: rgb(146, 146, 146);
-  --third-place: rgb(179, 100, 47);
-  --fourth-place: rgb(200, 90, 90);
-  --shadow-color: rgba(0, 0, 0, 0.16);
-}
-
 .container {
   display: flex;
   position: relative;
